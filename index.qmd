@@ -1,0 +1,1183 @@
+---
+title: "MATRICES"
+subtitle: "Metodología de Investigación"
+format: 
+  revealjs:
+    theme: white
+    chalkboard: true
+    logo: Images/eliaslogo.png
+    transition: slide
+    lang: Es-es
+    auto-stretch: true
+---
+
+## Elías Aburto Camacllanqui
+
+:::: {layout="[ 60, 40 ]"}
+
+::: {#first-column .nonincremental}
+
+<div style="font-size: 30px;">  <!-- Adjust the font size as needed -->
+
+- Soy psicólogo organizacional.
+
+- Mi objetivo es entender y ayudar a entender sobre temas relacionados en:
+    - Metodología de la Investigación
+    - Comportamiento Organizacional
+    - Comportamiento del Consumidor
+
+
+</div>
+
+:::
+
+::: {#second-column}
+
+![](Images/Elias.png)
+:::
+
+::::
+
+---
+
+## Agenda
+
+1. **Vectores**  
+   Igualdad de vectores, Operación con vectores, propiedades de operaciones vectoriales, norma y distancia, producto escalar y ortogonalidad.
+   
+2. **Matrices**  
+    Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial, propiedades de la multiplicación de matrice, potencias de matrices, matriz identidad, matriz transpuesta, determinantes, matrices diagonales, etc.
+
+---
+
+# <span style="color: white;">Vectores</span> {background-image="Images/matrix.jpg"}
+
+---
+
+## Vectores en $\mathbb{R}^n$
+
+- Un vector es una n-tupla ordenada de números reales
+- Puede representarse como **vector fila** o **vector columna**:
+
+$$\overline{x} = (x_1, x_2, \cdots, x_n) \quad \text{(fila)}$$
+
+$$\overline{x} = \begin{pmatrix}x_1 \\ x_2 \\ \vdots \\ x_n\end{pmatrix} \quad \text{(columna)}$$
+
+---
+
+- Cada $x_i$ se llama **componente** del vector
+- El número $n$ de componentes es la **dimensión**
+
+**Ejemplos:**
+
+- $\overline{x} = (2, 3, -1)$ → dimensión 3
+
+- $\overline{x} = (-2, \sqrt{3}, 2, 0)$ → dimensión 4
+
+---
+
+
+## Igualdad de Vectores
+
+Dos vectores $\overline{x}$ e $\overline{y}$ de dimensión $n$ son iguales si todas sus componentes correspondientes son iguales:
+
+$$\overline{x} = \overline{y} \iff x_i = y_i \quad \forall i = 1, \cdots, n$$
+
+**Ejemplo:**
+$$(1,-2,0) \neq (1,0,0)$$
+
+---
+
+## Operaciones con Vectores
+
+**Suma de vectores:**
+
+$$\overline{x} + \overline{y} = (x_1 + y_1, x_2 + y_2, \ldots, x_n + y_n)$$
+
+**Multiplicación por escalar:**
+
+$$\alpha \overline{x} = (\alpha x_1, \alpha x_2, \ldots, \alpha x_n)$$
+---
+
+## Operaciones con Vectores
+
+
+**Diferencia de vectores:**
+$$\overline{x} - \overline{y} = (x_1 - y_1, x_2 - y_2, \ldots, x_n - y_n)$$
+
+**Producto escalar (producto punto):**
+$$\overline{x} \cdot \overline{y} = \sum_{i=1}^n x_i y_i$$
+
+
+---
+
+## Vector Nulo y Ejemplos
+
+**Vector nulo:**
+$$\overline{0} = (0, 0, \ldots, 0)$$
+
+**Ejemplo de operaciones:**
+$$\overline{x} = (2, -4, 1), \quad \overline{y} = (3, 6, -5)$$
+
+$$\overline{x} + 2\overline{y} = (8, 8, -9)$$
+$$\overline{x} - \overline{y} = (-1, -10, 6)$$
+$$\overline{x} \cdot \overline{y} = -23$$
+
+---
+
+## Combinación Lineal
+
+Dados $\overline{x}, \overline{y} \in \mathbb{R}^n$ y escalares $\alpha, \beta$:
+
+$$\alpha\overline{x} + \beta\overline{y} = 
+\begin{pmatrix}
+\alpha x_1 + \beta y_1 \\
+\alpha x_2 + \beta y_2 \\
+\vdots \\
+\alpha x_n + \beta y_n
+\end{pmatrix}$$
+
+
+
+---
+
+## Propiedades de Operaciones Vectoriales
+
+1. $(\overline{x} + \overline{y}) + \overline{z} = \overline{x} + (\overline{y} + \overline{z})$
+2. $\overline{x} + \overline{y} = \overline{y} + \overline{x}$
+3. $\overline{x} + \overline{0} = \overline{x}$
+4. $\overline{x} + (-\overline{x}) = \overline{0}$
+5. $(\alpha + \beta)\overline{x} = \alpha\overline{x} + \beta\overline{x}$
+6. $\alpha(\overline{x} + \overline{y}) = \alpha\overline{x} + \alpha\overline{y}$
+7. $\alpha(\beta\overline{x}) = (\alpha\beta)\overline{x}$
+8. $1\overline{x} = \overline{x}$
+
+---
+
+**Ejemplo:** Resolver $3\overline{x} - 4\overline{y} = 2\overline{z}$
+
+Solución paso a paso:
+$$\overline{x} = \frac{2}{3}\overline{z} + \frac{4}{3}\overline{y}$$
+---
+
+## Interpretación Geométrica
+
+- En $\mathbb{R}^2$ y $\mathbb{R}^3$, un vector es el conjunto de todos los segmentos orientados equivalentes: misma magnitud (longitud), dirección (ángulo de inclinación) y sentido (signo positivo o negativo).
+
+- Ejemplo: $\overline{x} = (-2, 3)$ representa un desplazamiento de -2 unidades en x y +3 unidades en y
+
+---
+
+**Nota:** Diferentes segmentos pueden representar el mismo vector.
+
+El vector $\vec{w} = (2, 3)$ puede representarse con diferentes segmentos orientados:
+1. Desde el origen $(0,0)$ hasta $(2,3)$.
+2. Desde $(1,1)$ hasta $(3,4)$.  
+
+---
+
+## Norma y Distancia
+
+**Norma (longitud) de un vector:**
+$$\|\overline{x}\| = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}$$
+
+**Ejemplo:**
+$$\overline{x} = (4, 1, -2, 0, 3)$$
+$$\|\overline{x}\| = \sqrt{16 + 1 + 4 + 9} = \sqrt{30} \approx 5.42$$
+
+**Distancia entre vectores:**
+$$d(\overline{x}, \overline{y}) = \|\overline{x} - \overline{y}\|$$
+
+---
+
+## Producto Escalar y Ortogonalidad
+
+**Propiedades del producto escalar:**
+
+1. **Conmutatividad**  
+    $\overline{x} \cdot \overline{y} = \overline{y} \cdot \overline{x}$
+
+2. **Distributividad respecto a la suma**  
+    $\overline{x} \cdot (\overline{y} + \overline{z}) = \overline{x} \cdot \overline{y} + \overline{x} \cdot \overline{z}$
+
+3. **Asociatividad con escalares**
+    $(\alpha\overline{x}) \cdot \overline{y} = \alpha(\overline{x} \cdot \overline{y})$
+
+
+---
+
+**Ortogonalidad:**
+$$\overline{x} \perp \overline{y} \iff \overline{x} \cdot \overline{y} = 0$$
+
+**Ejemplo:**
+$$\overline{x} = (2,1), \overline{y} = (-3,6)$$
+$$\overline{x} \cdot \overline{y} = 0 \Rightarrow \overline{x} \perp \overline{y}$$
+
+
+---
+
+## Ángulo entre Vectores
+
+$$\cos \theta = \frac{\overline{x} \cdot \overline{y}}{\|\overline{x}\| \|\overline{y}\|}, \quad \theta \in [0, \pi]$$
+
+**Relación importante:**
+$$\overline{x} \cdot \overline{y} = \|\overline{x}\| \|\overline{y}\| \cos \theta$$
+
+Si $\overline{x} \perp \overline{y}$, entonces $\theta = 90^\circ$
+
+
+---
+
+# <span style="color: white;">Matrices</span> {background-image="Images/matrix.jpg"}
+
+---
+
+## Matrices 
+
+::: {.panel-tabset}
+
+### Definición
+
+Una matriz de orden $m \times n$ es un arreglo rectangular de números:
+
+$$A = \begin{pmatrix}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn}
+\end{pmatrix}$$
+
+
+### Ejemplos:
+
+
+$$\begin{pmatrix}2 & 3 \\ 1 & 4\end{pmatrix} \quad (2 \times 2)$$
+
+$$\begin{pmatrix}1 & 0 & 2 & 3 \\ -2 & \sqrt{5} & 4 & 0\end{pmatrix} \quad (2 \times 4)$$
+:::
+
+---
+
+## Operaciones con Matrices
+
+::: {.panel-tabset}
+
+
+### Igualdad
+
+$A = B$ si $a_{ij} = b_{ij} \quad \forall i,j$
+
+### Suma
+
+$A + B = (a_{ij} + b_{ij})$
+
+
+### Multiplicación por escalar
+
+$\alpha A = (\alpha a_{ij})$
+
+
+### Ejemplo
+
+$$A = \begin{pmatrix}1 & 2 & 3 \\ 6 & -2 & 0\end{pmatrix}, \quad B = \begin{pmatrix}0 & -2 & 8 \\ 7 & 1 & 0\end{pmatrix}$$
+
+$$A + B = \begin{pmatrix}1 & 0 & 11 \\ 13 & -1 & 0\end{pmatrix}$$
+
+:::
+
+
+---
+
+## Multiplicación de Matrices
+
+
+::: {.panel-tabset}
+
+### Operación
+
+Para $A_{m \times n}$ y $B_{n \times p}$:
+
+$$AB = C_{m \times p} \text{ donde } c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}$$
+
+
+### Ejemplo
+
+$$A = \begin{pmatrix}3 & 1 & 2 \\ -2 & 1 & 0 \\ 0 & 4 & 1\end{pmatrix}, \quad B = \begin{pmatrix}3 & 1 \\ 2 & 2 \\ 4 & 3\end{pmatrix}$$
+
+$$AB = \begin{pmatrix}14 & 11 \\ -4 & 0 \\ 12 & 11\end{pmatrix}$$
+
+**Nota:** $AB \neq BA$ en general
+
+::: 
+
+---
+
+
+## Sistemas de Ecuaciones en Forma Matricial
+
+**Ejemplo:**
+$$
+\begin{cases}
+2x_1 + 4x_2 + 5x_3 = 6 \\
+3x_1 - 2x_2 + 7x_3 = 4
+\end{cases}
+$$
+
+Se puede representar como:
+
+$$
+\begin{pmatrix}
+2 & 4 & 5 \\
+3 & -2 & 7
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix} =
+\begin{pmatrix}
+6 \\
+4
+\end{pmatrix}
+$$
+---
+
+**Notación compacta:** $A\vec{x} = \vec{b}$
+
+- $A$: Matriz de coeficientes ($2 \times 3$)
+- $\vec{x}$: Vector de variables ($3 \times 1$)
+- $\vec{b}$: Vector de constantes ($2 \times 1$)
+
+---
+
+## Propiedades de la Multiplicación de Matrices
+
+1. **Asociativa:** $(AB)C = A(BC)$
+2. **Distributiva (izquierda):** $A(B+C) = AB + AC$
+3. **Distributiva (derecha):** $(A+B)C = AC + BC$
+
+**¡Importante!** El producto de matrices no es conmutativo: $AB \neq BA$ en general
+
+---
+
+## Potencias de Matrices
+
+Para una matriz cuadrada $A$:
+
+$$A^k = A^{k-1}A \quad \text{para} \quad k = 1, 2, 3, \ldots$$
+
+**Definiciones:**
+
+- $A^1 = A$
+
+- $A^0 = I$ (matriz identidad)
+
+---
+
+## Matriz Identidad
+
+La matriz identidad de orden $n \times n$ se denota por $I_n$ (o simplemente $I$):
+
+$$
+I_n = 
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{pmatrix}_{n \times n}
+$$
+
+
+---
+
+**Propiedad fundamental:**
+
+$$AI = IA = A$$
+
+La matriz identidad actúa como el número 1 en la multiplicación de matrices.
+
+---
+
+## Matriz Transpuesta
+
+Dada una matriz $A$, su transpuesta $A^T$ se obtiene intercambiando filas por columnas.
+
+**Ejemplo:**
+$$
+A = 
+\begin{pmatrix}
+2 & 1 & 0 & -3 \\
+3 & 1 & -2 & 4
+\end{pmatrix} 
+\quad \Rightarrow \quad 
+A^T =
+\begin{pmatrix}
+2 & 3 \\
+1 & 1 \\
+0 & -2 \\
+-3 & 4
+\end{pmatrix}
+$$
+
+---
+
+## Propiedades de la Transpuesta
+
+1. $(A^T)^T = A$
+2. $(A+B)^T = A^T + B^T$
+3. $(\alpha A)^T = \alpha A^T$
+4. $(AB)^T = B^T A^T$
+
+**Matriz simétrica:** $A$ es simétrica si $A = A^T$
+
+**Ejemplo de matriz simétrica:**
+$$
+\begin{pmatrix}
+2 & 4 & 6 \\
+4 & 1 & 5 \\
+6 & 5 & 3
+\end{pmatrix}
+$$
+
+---
+
+## Determinantes (Matrices 2×2)
+
+Para una matriz $2 \times 2$:
+$$
+A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}
+$$
+
+Su determinante es:
+$$
+|A| = a_{11}a_{22} - a_{21}a_{12}
+$$
+
+---
+
+**Ejemplos:**
+
+1. $\begin{vmatrix} 2 & 1 \\ 3 & 2 \end{vmatrix} = (2)(2)-(1)(3) = 1$
+
+2. $\begin{vmatrix} 3 & -1 \\ 5 & 4 \end{vmatrix} = (3)(4)-(5)(-1) = 17$
+
+3. $\begin{vmatrix} 0 & 0 \\ 2 & 6 \end{vmatrix} = 0$
+
+---
+
+## Regla de Cramer para Sistemas 2×2
+
+Para el sistema:
+$$
+\begin{cases}
+a_{11}x_1 + a_{12}x_2 = b_1 \\
+a_{21}x_1 + a_{22}x_2 = b_2
+\end{cases}
+$$
+
+Las soluciones son:
+$$
+x_1 = \frac{\begin{vmatrix} b_1 & a_{12} \\ b_2 & a_{22} \end{vmatrix}}{|A|}, \quad
+x_2 = \frac{\begin{vmatrix} a_{11} & b_1 \\ a_{21} & b_2 \end{vmatrix}}{|A|}
+$$
+
+---
+
+**Ejemplo:**
+$$
+\begin{cases}
+2x_1 + 3x_2 = 4 \\
+5x_1 - 6x_2 = 8
+\end{cases}
+$$
+
+Solución:
+$$
+x_1 = \frac{-48}{-27} = \frac{16}{9}, \quad x_2 = \frac{-4}{-27} = \frac{4}{27}
+$$
+
+---
+
+## Matrices Diagonales
+
+Una matriz cuadrada $D = (d_{ij})$ es diagonal si $d_{ij} = 0$ para todo $i \neq j$.
+
+**Ejemplos:**
+
+1. $\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} = \text{diag}(2,3)$
+
+2. $\begin{pmatrix} 3 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 4 \end{pmatrix} = \text{diag}(3,-2,4)$
+
+---
+
+**Determinante:** Para matrices diagonales, $|D|$ es el producto de los elementos de la diagonal.
+
+
+Para $2 \times 2$: $|D| = d_{11}d_{22}$
+
+Para $n \times n$: $|D| = \prod_{i=1}^n d_{ii}$
+
+---
+
+## Matrices Triangulares Superiores
+
+Una matriz cuadrada es triangular superior si todos los elementos por debajo de la diagonal principal son cero.
+
+**Ejemplos:**
+
+1. $\begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix}$
+
+2. $\begin{pmatrix} 1 & 2 & 0 \\ 0 & -3 & 1 \\ 0 & 0 & 2 \end{pmatrix}$
+
+---
+
+**Propiedad:** El determinante de una matriz triangular superior es el producto de los elementos de su diagonal principal.
+
+**Ejemplo:**
+$\begin{vmatrix} 2 & 3 \\ 0 & 1 \end{vmatrix} = (2)(1) = 2$
+
+---
+
+## Menores y Cofactores
+
+**Definición:**
+
+Para una matriz cuadrada $A = (a_{ij})$, el **menor** $M_{ij}$ es el determinante de la submatriz obtenida al eliminar la fila $i$ y columna $j$ de $A$.
+
+El **cofactor** $C_{ij}$ se define como:
+$$C_{ij} = (-1)^{i+j} M_{ij}$$
+
+---
+
+**Ejemplo:**
+$$
+A = \begin{pmatrix}
+1 & 0 & 3 \\
+4 & -1 & 2 \\
+0 & -2 & 1
+\end{pmatrix}
+$$
+
+- $M_{11} = \begin{vmatrix} -1 & 2 \\ -2 & 1 \end{vmatrix} = 3$
+- $C_{11} = (-1)^2 M_{11} = 3$
+- $M_{12} = \begin{vmatrix} 4 & 2 \\ 0 & 1 \end{vmatrix} = 4$
+- $C_{12} = (-1)^3 M_{12} = -4$
+
+---
+
+## Cálculo de Determinantes (n×n)
+
+Para una matriz $A$ de orden $n \times n$, el determinante se puede calcular por:
+
+1. **Expansión por filas:**
+$$|A| = \sum_{j=1}^n a_{ij} C_{ij} \quad (\text{para cualquier fila } i)$$
+
+2. **Expansión por columnas:**
+$$|A| = \sum_{i=1}^n a_{ij} C_{ij} \quad (\text{para cualquier columna } j)$$
+
+---
+
+**Ejemplo:**
+$$
+A = \begin{pmatrix}
+1 & 2 & -1 \\
+3 & 0 & 1 \\
+4 & 2 & 1
+\end{pmatrix}
+$$
+
+Expandiendo por la fila 1:
+$$|A| = 1(0-2) - 2(3-4) -1(6-0) = -6$$
+
+---
+
+## Regla de Cramer para Sistemas n×n
+
+Para un sistema $A\vec{x} = \vec{b}$ con $|A| \neq 0$, la solución es:
+
+$$x_k = \frac{|A_k|}{|A|}$$
+
+donde $A_k$ es la matriz obtenida al reemplazar la columna $k$ de $A$ por $\vec{b}$.
+
+---
+
+**Ejemplo:**
+
+$$
+\begin{cases}
+2x_1 + 2x_2 - x_3 = -3 \\
+4x_1 + 2x_3 = 8 \\
+6x_2 - 3x_3 = -12
+\end{cases}
+$$
+
+- $|A| = -24$
+- $x_1 = \frac{-12}{-24} = \frac{1}{2}$
+- $x_2 = \frac{12}{-24} = -\frac{1}{2}$
+- $x_3 = \frac{-72}{-24} = 3$
+
+---
+
+## Propiedades de los Determinantes
+
+1. Si una fila/columna es cero: $|A| = 0$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+2. $|A| = |A^T|$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+3. Multiplicar una fila por $\alpha$: $|B| = \alpha|A|$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+4. Intercambiar filas: $|B| = -|A|$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+5. Filas iguales: $|A| = 0$
+
+---
+
+6. Filas proporcionales: $|A| = 0$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+7. Sumar múltiplo de una fila a otra no cambia $|A|$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+8. $|AB| = |A||B|$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+9. $|\alpha A| = \alpha^n |A|$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+**¡Importante!** En general $|A+B| \neq |A| + |B|$
+
+---
+
+## Matriz Inversa
+
+Una matriz $A$ de orden $n \times n$ es **inversible** si existe $A^{-1}$ tal que:
+$$AA^{-1} = A^{-1}A = I$$
+
+**Condición:** $A$ es invertible $\iff |A| \neq 0$
+
+---
+
+**Ejemplo (2×2):**
+$$
+A = \begin{pmatrix} 5 & 6 \\ 5 & 10 \end{pmatrix}, \quad
+A^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{3}{10} \\ -\frac{1}{4} & \frac{1}{4} \end{pmatrix}
+$$
+
+**Fórmula para 2×2:**
+$$
+A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \Rightarrow
+A^{-1} = \frac{1}{|A|} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+$$
+
+---
+
+## Propiedades de la Matriz Inversa
+
+<div style="margin-bottom: 1.5em;"></div>
+
+1. $(A^{-1})^{-1} = A$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+2. $(AB)^{-1} = B^{-1}A^{-1}$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+3. $(A^T)^{-1} = (A^{-1})^T$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+4. $(\alpha A)^{-1} = \frac{1}{\alpha}A^{-1}, \alpha \neq 0$
+
+---
+
+**Aplicación:** Resolver $A\vec{x} = \vec{b}$:
+$$\vec{x} = A^{-1}\vec{b}$$
+
+**Ejemplo:**
+$$
+\begin{cases}
+2x_1 + 3x_2 = 5 \\
+x_1 + 4x_2 = 10
+\end{cases}
+\Rightarrow
+\vec{x} = \begin{pmatrix} 4/5 & -3/5 \\ -1/5 & 2/5 \end{pmatrix} \begin{pmatrix} 5 \\ 10 \end{pmatrix} = \begin{pmatrix} -2 \\ 3 \end{pmatrix}
+$$
+
+---
+
+## Independencia Lineal
+
+Los vectores $\{\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_m\}$ en $\mathbb{R}^n$ son **linealmente independientes (l.i.)** si:
+$$\sum_{i=1}^m \alpha_i \vec{x}_i = \vec{0} \implies \alpha_i = 0 \forall i$$
+
+---
+
+**Ejemplo l.i.:**
+$$
+\vec{x}_1 = (3,1), \vec{x}_2 = (4,6)
+$$
+La única solución a $\alpha_1 \vec{x}_1 + \alpha_2 \vec{x}_2 = \vec{0}$ es $\alpha_1 = \alpha_2 = 0$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+**Ejemplo l.d.:**
+
+$$
+\vec{x}_1 = (3,4), \vec{x}_2 = (9,12)
+$$
+Son l.d. porque $\vec{x}_2 = 3\vec{x}_1$
+
+---
+
+## Interpretación Geométrica
+
+- **L.i.:** Ningún vector es combinación lineal de los otros
+- **L.d.:** Al menos un vector es combinación lineal de los otros
+
+**Observaciones:**
+
+1. Un solo vector no nulo es l.i.
+
+2. Cualquier conjunto que incluya $\vec{0}$ es l.d.
+
+3. En $\mathbb{R}^n$ hay como máximo $n$ vectores l.i.
+
+---
+
+**Ejemplo en $\mathbb{R}^3$:**
+$$
+\vec{x}_1 = (2,1,3), \vec{x}_2 = (4,0,2), \vec{x}_3 = (7,2,12)
+$$
+Son l.d. porque $\vec{x}_3 = 2\vec{x}_1 + 3\vec{x}_2$
+
+---
+
+## Rango de una Matriz
+
+El **rango** $\rho(A)$ es el máximo número de columnas (o filas) linealmente independientes.
+
+**Ejemplos:**
+
+
+1. 
+$$
+A = \begin{pmatrix}
+2 & 1 & 7 \\
+1 & 0 & 2 \\
+3 & 2 & 12
+\end{pmatrix}, \quad \rho(A) = 2 \text{ (pues } C_3 = 2C_1 + 3C_2)
+$$
+
+2. 
+$$
+B = \begin{pmatrix}
+1 & 6 \\
+3 & 18
+\end{pmatrix}, \quad \rho(B) = 1
+$$
+
+---
+
+<div style="margin-bottom: 1.5em;"></div>
+
+**Propiedad:** $\rho(A) = \rho(A^T)$
+
+<div style="margin-bottom: 1.5em;"></div>
+
+**Cota:** Para $A_{m \times n}$, $\rho(A) \leq \min\{m,n\}$
+
+
+---
+
+:::: {layout="[ 60, 40 ]"}
+
+::: {#first-column}
+
+<div style="font-size: 30px;">  <!-- Adjust the font size as needed -->
+
+- Social behaviors which provoke territorial agression (Thurmond, 1975).
+
+- Experiment:
+  - A resident mouse is put in a cage for 24 hours.
+  - Then, an intruder mouse enters the cage.
+  - A camera records the secuence of behaviors that provoce agression.
+  - At the end, researchers manually label the observed behaviors in the video to identify patterns of behavior.
+</div>
+
+:::
+
+::: {#second-column}
+
+![](Images/Resident_Intruder_Paradigm.png)
+:::
+
+::::
+
+
+---
+
+## Problems
+
+:::: {layout="[ 60, 40 ]"}
+
+::: {#first-column}
+
+<div style="font-size: 35px;">  <!-- Adjust the font size as needed -->
+
+- **Replicability Crisis**: The observations can vary between researchers, which affect the replicability of studies.
+
+- **Fatigue and Error**: The process demands time and effort, which can provoke errors.
+
+
+</div>
+
+:::
+
+::: {#second-column}
+
+![](Images/Replicability.png)
+:::
+
+::::
+
+
+---
+
+# <span style="color: white;">Justification</span> {background-image="Images/matrix.jpg"}
+
+
+---
+
+## Theoretical Justification
+
+:::: {layout="[ 50, 50 ]"}
+
+::: {#first-column}
+
+
+::: {#text-block style="background-color: #f8d7da; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 100px;"}
+
+<div style="font-size: 35px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">  <!-- Adjust the font size and color as needed -->
+
+**Problem**: The observations can vary between researchers, which affect the replicability of studies.
+
+</div>
+
+:::
+
+:::
+
+::: {#second-column }
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 35px; color: white;">  <!-- Adjust the font size as needed -->
+
+The classification model drives more **objective**, **precise**, and **scalable** measurements compare to manual labeling. Therefore, it increase the quality of social research.
+
+</div>
+:::
+
+:::
+
+::::
+
+---
+
+## Practical Justification
+
+
+
+:::: {layout="[ 50, 50 ]"}
+
+::: {#first-column}
+
+
+::: {#text-block style="background-color: #f8d7da; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 100px;"}
+
+<div style="font-size: 35px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">  <!-- Adjust the font size and color as needed -->
+
+**Problem**: The process demands time and effort, which can provoke errors.
+
+</div>
+
+:::
+
+:::
+
+::: {#second-column }
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 35px; color: white;">  <!-- Adjust the font size as needed -->
+
+The automatic classification model streamlines the research process in research centers making researchers more productive.
+
+</div>
+:::
+
+:::
+
+::::
+
+
+---
+
+# <span style="color: white;">Objective</span> {background-image="Images/matrix.jpg"}
+
+
+---
+
+## Main Objective
+
+
+<div style="font-size: 60px; margin-top: 80px;">  <!-- Adjust the font size as needed -->
+
+Develop an automatic classification model for the monitoring and analysis of animal behavior in research environments.
+
+</div>
+
+
+---
+
+# <span style="color: white;">Methodology</span> {background-image="Images/matrix.jpg"}
+
+
+---
+
+## Data
+
+::: {.panel-tabset}
+
+### Tool
+
+- **MARS**: A tool for capturing the positions of mice using deep learning (Segalin et al, 2021).
+
+::: {layout="[40,60]"}
+
+![](Images/MARS.png)
+
+![](Images/mars_demo.gif)
+
+:::
+
+
+### Challenge
+
+::: {layout="[50,50]"}
+
+- **Caltech Data** published the <a href="https://data.caltech.edu/records/s0vdx-0k302" target="_blank">dataset</a> which contains positions and labels.
+
+![](Images/Caltech.png){width=800px height=300px}
+:::
+
+### Task
+
+
+![](Images/Task1.png)
+
+:::
+
+
+---
+
+## Exploratory Data Analysis
+
+::: {.panel-tabset}
+
+### Sequence
+
+- Each sequence corresponds to a particular experiment involving a resident mouse (0) and an intruder mouse (1).
+
+![](Images/sequence.png)
+
+
+### Visualitation
+
+::: {layout="[40,60]"}
+- Each sequence has a different number of frames.
+
+![](Images/pose_sequence.gif)
+
+::: 
+
+
+### F / sequence
+
+![](Images/Frame1.png)
+
+### F / Dataset
+
+Percentaje of frames per class in the whole dataset.
+
+![](Images/Frame2.png)
+
+
+
+
+
+
+---
+
+## Preprocessing
+
+::: {.panel-tabset}
+
+### Loading data
+
+![](Images/LoadData.png)
+
+
+### Padding data
+
+![](Images/PaddingData.png)
+
+
+::: 
+
+
+---
+
+## Training
+
+::: {.panel-tabset}
+
+
+### Loss function
+
+<div style="font-size: 25px;">  <!-- Adjust the font size as needed -->
+
+Sparse Categorical Cross Entropy is appropriate for multi-class classification problems.
+
+</div>
+
+![](Images/LossFunction.png)
+
+
+
+
+### Model Structure
+
+![](Images/ModelStructure.png)
+
+
+
+### Training
+
+![](Images/Training.png)
+
+::: 
+
+
+---
+
+## Evaluation
+
+::: {.panel-tabset}
+
+### Model Accuracy
+
+![](Images/Model_Accuracy.png)
+
+### Model Loss
+
+![](Images/Model_Loss.png)
+
+### Test Accuracy
+
+![](Images/Test_Accuracy.png)
+
+:::
+
+---
+
+# <span style="color: white;">Expected Impact</span> {background-image="Images/matrix.jpg"}
+
+
+---
+
+## Expected Impact
+
+
+:::: {layout="[ 50, 50 ]"}
+
+::: {#first-column}
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 25px; color: white;">  <!-- Adjust the font size as needed -->
+
+**Advances in Scientific Research**: 
+
+- Significantly reduces time and errors in the process.
+- Improves the precision and consistency of the results.
+- Optimizes the replicability of studies by minimizing variance between observers.
+
+</div>
+
+:::
+
+:::
+
+::: {#second-column }
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 25px; color: white;">  <!-- Adjust the font size as needed -->
+
+**Practical Application**: 
+
+- Can be expanded to identify social human behaviors, such as harassment and bullying.
+- Could help address security issues in schools and businesses by identifying dangerous behaviors automatically.
+- Could aid in the care of animals during their development.
+
+</div>
+:::
+
+:::
+
+::::
+
+
+
+---
+
+
+# References{background-image="Images/matrix.jpg"}
+
+
+---
+
+
+<div style="font-size: 30px; text-indent: -1.27cm; padding-left: 1.27cm;">
+
+Segalin, C., Williams, J., Karigo, T., Hui, M., Zelikowsky, M., Sun, J. J., Perona, P., Anderson, D. J., & Kennedy, A. (2021). The Mouse Action Recognition System (MARS) software pipeline for automated analysis of social behaviors in mice. *eLife, 10*, e63720. https://doi.org/10.7554/eLife.63720 
+
+<br>
+
+Sun, J. J., Karigo, T., Chakraborty, D., Mohanty, S. P., Wild, B., Sun, Q., Chen, C., Anderson, D. J., Perona, P., Yue, Y., & Kennedy, A. (2021). The Multi-Agent Behavior Dataset: Mouse Dyadic Social Interactions. *Adv Neural Inf Process Syst*(Db1), 1-15.
+
+<br>
+
+Thurmond, J. B. (1975). Technique for producing and measuring territorial aggression using laboratory mice. *Physiology & Behavior, 14*(6), 879-881. https://doi.org/https://doi.org/10.1016/0031-9384(75)90086-4
+
+</div>
+
+---
+
+# Thanks
+
+---
