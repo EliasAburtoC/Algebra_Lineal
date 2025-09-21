@@ -342,8 +342,8 @@
 <div style="font-size: 30px;">
 <p><!-- Adjust the font size as needed --></p>
 <ul>
-<li><p>Soy psicólogo organizacional.</p></li>
-<li><p>Mi objetivo es entender y ayudar a entender sobre temas relacionados en:</p>
+<li><p>Psicólogo organizacional.</p></li>
+<li><p>Objetivo: entender y ayudar a entender sobre temas relacionados a:</p>
 <ul>
 <li>Metodología de la Investigación</li>
 <li>Comportamiento Organizacional</li>
@@ -459,7 +459,11 @@ Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial
 <section class="slide level2">
 
 <p><strong>Nota:</strong> Diferentes segmentos pueden representar el mismo vector.</p>
-<p>El vector <span class="math inline">\(\vec{w} = (2, 3)\)</span> puede representarse con diferentes segmentos orientados: 1. Desde el origen <span class="math inline">\((0,0)\)</span> hasta <span class="math inline">\((2,3)\)</span>. 2. Desde <span class="math inline">\((1,1)\)</span> hasta <span class="math inline">\((3,4)\)</span>.</p>
+<p>El vector <span class="math inline">\(\vec{w} = (2, 3)\)</span> puede representarse con diferentes segmentos orientados:</p>
+<ol type="1">
+<li><p>Desde el origen <span class="math inline">\((0,0)\)</span> hasta <span class="math inline">\((2,3)\)</span>.</p></li>
+<li><p>Desde <span class="math inline">\((1,1)\)</span> hasta <span class="math inline">\((3,4)\)</span>.</p></li>
+</ol>
 </section>
 <section id="norma-y-distancia" class="slide level2">
 <h2>Norma y Distancia</h2>
@@ -485,9 +489,21 @@ Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial
 </section>
 <section id="ángulo-entre-vectores" class="slide level2">
 <h2>Ángulo entre Vectores</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Fórmula</a></li><li><a href="#tabset-1-2">Ángulos notables</a></li><li><a href="#tabset-1-3">Relación importante</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
 <p><span class="math display">\[\cos \theta = \frac{\overline{x} \cdot \overline{y}}{\|\overline{x}\| \|\overline{y}\|}, \quad \theta \in [0, \pi]\]</span></p>
-<p><strong>Relación importante:</strong> <span class="math display">\[\overline{x} \cdot \overline{y} = \|\overline{x}\| \|\overline{y}\| \cos \theta\]</span></p>
+</div>
+<div id="tabset-1-2">
+<p><img data-src="Images/ANGULOS_NOTABLES.png"></p>
+</div>
+<div id="tabset-1-3">
+<p><span class="math display">\[\overline{x} \cdot \overline{y} = \|\overline{x}\| \|\overline{y}\| \cos \theta\]</span></p>
 <p>Si <span class="math inline">\(\overline{x} \perp \overline{y}\)</span>, entonces <span class="math inline">\(\theta = 90^\circ\)</span></p>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
@@ -500,9 +516,9 @@ Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial
 <section id="matrices-1" class="slide level2">
 <h2>Matrices</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Definición</a></li><li><a href="#tabset-1-2">Ejemplos:</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Definición</a></li><li><a href="#tabset-2-2">Ejemplos:</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1">
+<div id="tabset-2-1">
 <p>Una matriz de orden <span class="math inline">\(m \times n\)</span> es un arreglo rectangular de números:</p>
 <p><span class="math display">\[A = \begin{pmatrix}
 a_{11} &amp; \cdots &amp; a_{1n} \\
@@ -510,7 +526,7 @@ a_{11} &amp; \cdots &amp; a_{1n} \\
 a_{m1} &amp; \cdots &amp; a_{mn}
 \end{pmatrix}\]</span></p>
 </div>
-<div id="tabset-1-2">
+<div id="tabset-2-2">
 <p><span class="math display">\[\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4\end{pmatrix} \quad (2 \times 2)\]</span></p>
 <p><span class="math display">\[\begin{pmatrix}1 &amp; 0 &amp; 2 &amp; 3 \\ -2 &amp; \sqrt{5} &amp; 4 &amp; 0\end{pmatrix} \quad (2 \times 4)\]</span></p>
 </div>
@@ -520,18 +536,18 @@ a_{m1} &amp; \cdots &amp; a_{mn}
 <section id="operaciones-con-matrices" class="slide level2">
 <h2>Operaciones con Matrices</h2>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Igualdad</a></li><li><a href="#tabset-2-2">Suma</a></li><li><a href="#tabset-2-3">Multiplicación por escalar</a></li><li><a href="#tabset-2-4">Ejemplo</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Igualdad</a></li><li><a href="#tabset-3-2">Suma</a></li><li><a href="#tabset-3-3">Multiplicación por escalar</a></li><li><a href="#tabset-3-4">Ejemplo</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1">
+<div id="tabset-3-1">
 <p><span class="math inline">\(A = B\)</span> si <span class="math inline">\(a_{ij} = b_{ij} \quad \forall i,j\)</span></p>
 </div>
-<div id="tabset-2-2">
+<div id="tabset-3-2">
 <p><span class="math inline">\(A + B = (a_{ij} + b_{ij})\)</span></p>
 </div>
-<div id="tabset-2-3">
+<div id="tabset-3-3">
 <p><span class="math inline">\(\alpha A = (\alpha a_{ij})\)</span></p>
 </div>
-<div id="tabset-2-4">
+<div id="tabset-3-4">
 <p><span class="math display">\[A = \begin{pmatrix}1 &amp; 2 &amp; 3 \\ 6 &amp; -2 &amp; 0\end{pmatrix}, \quad B = \begin{pmatrix}0 &amp; -2 &amp; 8 \\ 7 &amp; 1 &amp; 0\end{pmatrix}\]</span></p>
 <p><span class="math display">\[A + B = \begin{pmatrix}1 &amp; 0 &amp; 11 \\ 13 &amp; -1 &amp; 0\end{pmatrix}\]</span></p>
 </div>
@@ -541,15 +557,15 @@ a_{m1} &amp; \cdots &amp; a_{mn}
 <section id="multiplicación-de-matrices" class="slide level2">
 <h2>Multiplicación de Matrices</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Operación</a></li><li><a href="#tabset-3-2">Ejemplo</a></li></ul>
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Operación</a></li><li><a href="#tabset-4-2">Ejemplo</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1">
+<div id="tabset-4-1">
 <p>Para <span class="math inline">\(A_{m \times n}\)</span> y <span class="math inline">\(B_{n \times p}\)</span>:</p>
 <p><span class="math display">\[AB = C_{m \times p} \text{ donde } c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}\]</span></p>
 </div>
-<div id="tabset-3-2">
+<div id="tabset-4-2">
 <p><span class="math display">\[A = \begin{pmatrix}3 &amp; 1 &amp; 2 \\ -2 &amp; 1 &amp; 0 \\ 0 &amp; 4 &amp; 1\end{pmatrix}, \quad B = \begin{pmatrix}3 &amp; 1 \\ 2 &amp; 2 \\ 4 &amp; 3\end{pmatrix}\]</span></p>
-<p><span class="math display">\[AB = \begin{pmatrix}14 &amp; 11 \\ -4 &amp; 0 \\ 12 &amp; 11\end{pmatrix}\]</span></p>
+<p><span class="math display">\[AB = \begin{pmatrix}19 &amp; 11 \\ -4 &amp; 0 \\ 12 &amp; 11\end{pmatrix}\]</span></p>
 <p><strong>Nota:</strong> <span class="math inline">\(AB \neq BA\)</span> en general</p>
 </div>
 </div>
@@ -981,301 +997,22 @@ B = \begin{pmatrix}
 </section>
 <section class="slide level2">
 
-<div class="quarto-layout-panel" data-layout="[ 60, 40 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<div style="font-size: 30px;">
-<p><!-- Adjust the font size as needed --></p>
-<ul>
-<li><p>Social behaviors which provoke territorial agression (Thurmond, 1975).</p></li>
-<li><p>Experiment:</p>
-<ul>
-<li>A resident mouse is put in a cage for 24 hours.</li>
-<li>Then, an intruder mouse enters the cage.</li>
-<li>A camera records the secuence of behaviors that provoce agression.</li>
-<li>At the end, researchers manually label the observed behaviors in the video to identify patterns of behavior.</li>
-</ul></li>
-</ul>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<p><img data-src="Images/Resident_Intruder_Paradigm.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="problems" class="slide level2">
-<h2>Problems</h2>
-<div class="quarto-layout-panel" data-layout="[ 60, 40 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<div style="font-size: 35px;">
-<p><!-- Adjust the font size as needed --></p>
-<ul>
-<li><p><strong>Replicability Crisis</strong>: The observations can vary between researchers, which affect the replicability of studies.</p></li>
-<li><p><strong>Fatigue and Error</strong>: The process demands time and effort, which can provoke errors.</p></li>
-</ul>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<p><img data-src="Images/Replicability.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="justification" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
-<h1><span style="color: white;">Justification</span></h1>
-
-</section>
-<section id="theoretical-justification" class="slide level2">
-<h2>Theoretical Justification</h2>
-<div class="quarto-layout-panel" data-layout="[ 50, 50 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="text-block" style="background-color: #f8d7da; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 100px;">
-<div style="font-size: 35px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-<p><!-- Adjust the font size and color as needed --></p>
-<p><strong>Problem</strong>: The observations can vary between researchers, which affect the replicability of studies.</p>
-</div>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="text-block" style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;">
-<div style="font-size: 35px; color: white;">
-<p><!-- Adjust the font size as needed --></p>
-<p>The classification model drives more <strong>objective</strong>, <strong>precise</strong>, and <strong>scalable</strong> measurements compare to manual labeling. Therefore, it increase the quality of social research.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="practical-justification" class="slide level2">
-<h2>Practical Justification</h2>
-<div class="quarto-layout-panel" data-layout="[ 50, 50 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="text-block" style="background-color: #f8d7da; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 100px;">
-<div style="font-size: 35px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-<p><!-- Adjust the font size and color as needed --></p>
-<p><strong>Problem</strong>: The process demands time and effort, which can provoke errors.</p>
-</div>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="text-block" style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;">
-<div style="font-size: 35px; color: white;">
-<p><!-- Adjust the font size as needed --></p>
-<p>The automatic classification model streamlines the research process in research centers making researchers more productive.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="objective" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
-<h1><span style="color: white;">Objective</span></h1>
-
-</section>
-<section id="main-objective" class="slide level2">
-<h2>Main Objective</h2>
-<div style="font-size: 60px; margin-top: 80px;">
-<p><!-- Adjust the font size as needed --></p>
-<p>Develop an automatic classification model for the monitoring and analysis of animal behavior in research environments.</p>
-</div>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="methodology" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
-<h1><span style="color: white;">Methodology</span></h1>
-
-</section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Tool</a></li><li><a href="#tabset-4-2">Challenge</a></li><li><a href="#tabset-4-3">Task</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1">
-<ul>
-<li><strong>MARS</strong>: A tool for capturing the positions of mice using deep learning (Segalin et al, 2021).</li>
-</ul>
-<div class="quarto-layout-panel" data-layout="[40,60]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<p><img data-src="Images/MARS.png"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><img data-src="Images/mars_demo.gif"></p>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="quarto-layout-panel" data-layout="[50,50]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li><strong>Caltech Data</strong> published the <a href="https://data.caltech.edu/records/s0vdx-0k302" target="_blank">dataset</a> which contains positions and labels.</li>
-</ul>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="Images/Caltech.png" width="800" height="300"></p>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-3">
-<p><img data-src="Images/Task1.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="exploratory-data-analysis" class="slide level2">
-<h2>Exploratory Data Analysis</h2>
-<p>::: {.panel-tabset}</p>
-<h3 id="sequence">Sequence</h3>
-<ul>
-<li>Each sequence corresponds to a particular experiment involving a resident mouse (0) and an intruder mouse (1).</li>
-</ul>
-<p><img data-src="Images/sequence.png"></p>
-<h3 id="visualitation">Visualitation</h3>
-<div class="quarto-layout-panel" data-layout="[40,60]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
-<ul>
-<li>Each sequence has a different number of frames.</li>
-</ul>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><img data-src="Images/pose_sequence.gif"></p>
-</div>
-</div>
-</div>
-<h3 id="f-sequence">F / sequence</h3>
-<p><img data-src="Images/Frame1.png"></p>
-<h3 id="f-dataset">F / Dataset</h3>
-<p>Percentaje of frames per class in the whole dataset.</p>
-<p><img data-src="Images/Frame2.png"></p>
-</section>
-<section id="preprocessing" class="slide level2">
-<h2>Preprocessing</h2>
-<div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Loading data</a></li><li><a href="#tabset-5-2">Padding data</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1">
-<p><img data-src="Images/LoadData.png"></p>
-</div>
-<div id="tabset-5-2">
-<p><img data-src="Images/PaddingData.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="training" class="slide level2">
-<h2>Training</h2>
-<div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Loss function</a></li><li><a href="#tabset-6-2">Model Structure</a></li><li><a href="#tabset-6-3">Training</a></li></ul>
-<div class="tab-content">
-<div id="tabset-6-1">
-<div style="font-size: 25px;">
-<p><!-- Adjust the font size as needed --></p>
-<p>Sparse Categorical Cross Entropy is appropriate for multi-class classification problems.</p>
-</div>
-<p><img data-src="Images/LossFunction.png"></p>
-</div>
-<div id="tabset-6-2">
-<p><img data-src="Images/ModelStructure.png"></p>
-</div>
-<div id="tabset-6-3">
-<p><img data-src="Images/Training.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="evaluation" class="slide level2">
-<h2>Evaluation</h2>
-<div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Model Accuracy</a></li><li><a href="#tabset-7-2">Model Loss</a></li><li><a href="#tabset-7-3">Test Accuracy</a></li></ul>
-<div class="tab-content">
-<div id="tabset-7-1">
-<p><img data-src="Images/Model_Accuracy.png"></p>
-</div>
-<div id="tabset-7-2">
-<p><img data-src="Images/Model_Loss.png"></p>
-</div>
-<div id="tabset-7-3">
-<p><img data-src="Images/Test_Accuracy.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="expected-impact" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
-<h1><span style="color: white;">Expected Impact</span></h1>
-
-</section>
-<section id="expected-impact-1" class="slide level2">
-<h2>Expected Impact</h2>
-<div class="quarto-layout-panel" data-layout="[ 50, 50 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="text-block" style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;">
-<div style="font-size: 25px; color: white;">
-<p><!-- Adjust the font size as needed --></p>
-<p><strong>Advances in Scientific Research</strong>:</p>
-<ul>
-<li>Significantly reduces time and errors in the process.</li>
-<li>Improves the precision and consistency of the results.</li>
-<li>Optimizes the replicability of studies by minimizing variance between observers.</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="text-block" style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;">
-<div style="font-size: 25px; color: white;">
-<p><!-- Adjust the font size as needed --></p>
-<p><strong>Practical Application</strong>:</p>
-<ul>
-<li>Can be expanded to identify social human behaviors, such as harassment and bullying.</li>
-<li>Could help address security issues in schools and businesses by identifying dangerous behaviors automatically.</li>
-<li>Could aid in the care of animals during their development.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
 <section id="references" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
-<h1>References</h1>
+<h1><span style="color: white;">References</span></h1>
 
 </section>
 <section class="slide level2">
 
 <div style="font-size: 30px; text-indent: -1.27cm; padding-left: 1.27cm;">
-<p>Segalin, C., Williams, J., Karigo, T., Hui, M., Zelikowsky, M., Sun, J. J., Perona, P., Anderson, D. J., &amp; Kennedy, A. (2021). The Mouse Action Recognition System (MARS) software pipeline for automated analysis of social behaviors in mice. <em>eLife, 10</em>, e63720. https://doi.org/10.7554/eLife.63720</p>
+<p>Lang, S. (2010). <em>Álgebra lineal</em> (3rd ed.). Springer.</p>
 <p><br></p>
-<p>Sun, J. J., Karigo, T., Chakraborty, D., Mohanty, S. P., Wild, B., Sun, Q., Chen, C., Anderson, D. J., Perona, P., Yue, Y., &amp; Kennedy, A. (2021). The Multi-Agent Behavior Dataset: Mouse Dyadic Social Interactions. <em>Adv Neural Inf Process Syst</em>(Db1), 1-15.</p>
+<p>Strang, G. (2016). <em>Introduction to linear algebra</em> (5th ed.). Wellesley-Cambridge Press.</p>
 <p><br></p>
-<p>Thurmond, J. B. (1975). Technique for producing and measuring territorial aggression using laboratory mice. <em>Physiology &amp; Behavior, 14</em>(6), 879-881. https://doi.org/https://doi.org/10.1016/0031-9384(75)90086-4</p>
+<p>Tsukada, M., Wang, L., Matsubara, S., &amp; Takemura, N. (2023). <em>Linear algebra with Python</em>. Springer.</p>
+<p><br></p>
+<p>Strang, G. (2020). <em>Linear algebra for everyone</em>. Wellesley-Cambridge Press.</p>
 </div>
 </section>
 <section class="slide level2">
