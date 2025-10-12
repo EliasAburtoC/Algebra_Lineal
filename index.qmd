@@ -42,15 +42,37 @@ format:
 
 ## Agenda
 
-1. **Vectores**  
-   Igualdad de vectores, Operación con vectores, propiedades de operaciones vectoriales, norma y distancia, producto escalar y ortogonalidad.
-   
+1. **Operaciones con Vectores**  
+   Suma, producto por escalar, producto interno, ortogonalidad, norma de un vector, ángulo entre vectores.
+
 2. **Matrices**  
-    Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial, propiedades de la multiplicación de matrice, potencias de matrices, matriz identidad, matriz transpuesta, determinantes, matrices diagonales, etc.
+   Operaciones básicas con matrices (suma, producto, transpuesta).
+
+
+3. **Matrices Especiales**  
+   Matriz nula, matriz identidad, matriz diagonal, matriz triangular.
+
+
+4. **Elementos de Álgebra Lineal**  
+   Independencia lineal, bases.
+
+## Agenda
+
+5. **Determinantes y Matriz Inversa**  
+   Determinantes, propiedades, matriz inversa, rango de una matriz.
+
+
+6. **Sistema Ax = b**  
+   El sistema de ecuaciones lineales en forma matricial.
+
+
+7. **Valores y Vectores Propios**  
+   Conceptos fundamentales de valores y vectores propios.
+
 
 ---
 
-# <span style="color: white;">Vectores</span> {background-image="Images/matrix.jpg"}
+# <span style="color: white;">Operaciones con Vectores</span> {background-image="Images/matrix.jpg"}
 
 ---
 
@@ -442,6 +464,7 @@ $$
 3. $(\alpha A)^T = \alpha A^T$
 4. $(AB)^T = B^T A^T$
 
+
 **Matriz simétrica:** $A$ es simétrica si $A = A^T$
 
 **Ejemplo de matriz simétrica:**
@@ -452,6 +475,12 @@ $$
 6 & 5 & 3
 \end{pmatrix}
 $$
+
+
+---
+
+
+
 
 ---
 
@@ -732,6 +761,15 @@ $$
 
 ---
 
+# <span style="color: white;">Sistema Ax = b</span>{background-image="Images/matrix.jpg"}
+
+
+<span style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">
+El sistema de ecuaciones lineales en forma matricial.
+</span>
+
+---
+
 ## Independencia Lineal
 
 Los vectores $\{\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_m\}$ en $\mathbb{R}^n$ son **linealmente independientes (l.i.)** si:
@@ -807,16 +845,292 @@ $$
 
 <div style="margin-bottom: 1.5em;"></div>
 
-**Propiedad:** $\rho(A) = \rho(A^T)$
+**Nota:**
+
+El máximo número de columnas linealmente independientes coincide con  
+el máximo número de filas linealmente independientes.
 
 <div style="margin-bottom: 1.5em;"></div>
 
-**Cota:** Para $A_{m \times n}$, $\rho(A) \leq \min\{m,n\}$
+**Teorema:** $\rho(A) = \rho(A^T)$
 
+Note que si $A$ es de orden $m \times n$, entonces:
+
+$$\rho(A) \leq \min\{m, n\}$$
 
 
 ---
 
+
+## Rango de Matrices
+
+
+::: {.panel-tabset}
+
+
+### Definición
+
+El rango de la matriz $A$ es igual al orden de la mayor submatriz cuadrada de $A$ con determinante no nulo.
+
+### Ejemplo
+
+$$
+A = \begin{pmatrix}
+1 & 5 & 6 & -1 \\
+-1 & 1 & 0 & 3 \\
+3 & 2 & 5 & 1
+\end{pmatrix}
+$$
+
+Columnas: $C_1, C_2, C_3, C_4$
+
+
+### Solución
+
+Observamos que $C_3 = C_1 + C_2$, es decir, $C_3$ es combinación lineal de $C_1$ y $C_2$.  
+Luego concluimos que $\rho(A) \leq 3$.
+
+Además, podemos verificar que:
+
+$$
+\begin{vmatrix}
+1 & 5 & -1 \\
+-1 & 1 & 3 \\
+3 & 2 & 1
+\end{vmatrix} = 50 \neq 0 \Rightarrow \rho(A) = 3
+$$
+
+:::
+
+---
+
+## Aplicación: Sistemas de Ecuaciones
+
+Dado el sistema $A\mathbf{x} = \mathbf{b}$, ¿cómo determinamos cuándo este sistema tiene solución?
+
+Consideremos la matriz ampliada de $A$, denotada por $A_b$:
+
+$$A_b = (A \mid \mathbf{b})$$
+
+**Teorema:**  
+$$A\mathbf{x} = \mathbf{b} \text{ tiene solución} \iff \rho(A) = \rho(A_b)$$
+
+
+---
+
+### Ejemplo 1 - Sistema con Solución
+
+::: {.panel-tabset}
+
+#### Sistema
+
+$$
+\begin{cases}
+2x_1 + 3x_2 = 2 \\
+4x_1 + 7x_2 = 3
+\end{cases}
+$$
+
+#### Matrices
+
+$$
+A = \begin{pmatrix} 2 & 3 \\ 4 & 7 \end{pmatrix} \quad 
+A_b = \begin{pmatrix} 2 & 3 & 2 \\ 4 & 7 & 3 \end{pmatrix}
+$$
+
+Claramente $\rho(A) = \rho(A_b) = 2$, entonces el sistema tiene solución.
+
+
+:::
+
+
+---
+
+
+### Ejemplo 2 - Sistema sin Solución
+
+::: {.panel-tabset}
+
+#### Sistema
+$$
+\begin{cases}
+3x_1 + 4x_2 = 2 \\
+6x_1 + 8x_2 = 3
+\end{cases}
+$$
+
+#### Matrices
+
+$$
+A = \begin{pmatrix} 3 & 4 \\ 6 & 8 \end{pmatrix} \quad 
+A_b = \begin{pmatrix} 3 & 4 & 2 \\ 6 & 8 & 3 \end{pmatrix}
+$$
+
+Como $\rho(A) = 1$ y $\rho(A_b) = 2$, entonces el sistema **no tiene solución**.
+
+En efecto, si multiplicamos la primera ecuación por 2 obtenemos $6x_1 + 8x_2 = 4$, que contradice la segunda ecuación.
+
+
+:::
+
+
+---
+
+
+### Ejemplo 3 - Sistema 3×3 con Solución
+
+::: {.panel-tabset}
+
+#### Sistema
+$$
+\begin{cases}
+2x_1 + 2x_2 - x_3 = -3 \\
+4x_1 + 2x_3 = 8 \\
+6x_2 - 3x_3 = -12
+\end{cases}
+$$
+
+#### Matrices
+
+$$
+A = \begin{pmatrix} 2 & 2 & -1 \\ 4 & 0 & 2 \\ 0 & 6 & -3 \end{pmatrix} \quad 
+A_b = \begin{pmatrix} 2 & 2 & -1 & -3 \\ 4 & 0 & 2 & 8 \\ 0 & 6 & -3 & -12 \end{pmatrix}
+$$
+
+$\rho(A) = 3$ y $\rho(A_b) = 3$, luego el sistema **tiene solución**.
+
+:::
+
+
+---
+
+# <span style="color: white;">Valores y Vectores Propios</span> {background-image="Images/matrix.jpg"}
+
+---
+
+
+
+## Valores y Vectores Propios
+
+::: {.panel-tabset}
+
+### Definición
+
+Sea $A$ una matriz cuadrada de orden $n \times n$.
+
+El número real $\lambda$ se llama **valor propio** de $A$ si existe un vector $v \in \mathbb{R}^n$, no nulo, tal que:
+
+$$Av = \lambda v$$
+
+El vector $v$ se llama **vector propio**.
+
+### Cómo encontrar $\lambda$ y $v$
+
+De la definición se tiene:
+
+$$Av - \lambda Iv = 0$$
+$$(A - \lambda I)v = 0$$
+
+Como $v \neq 0$, entonces esta ecuación es cierta si y solamente si $|A - \lambda I| = 0$.
+
+:::
+
+---
+
+## Ejemplo: Valores Propios
+
+::: {.panel-tabset}
+
+### Matriz dada:
+$$A = \begin{pmatrix}
+1 & 6 \\
+5 & 2
+\end{pmatrix}$$
+
+### Matriz $A - \lambda I$:
+$$A - \lambda I = \begin{pmatrix}
+1 & 6 \\
+5 & 2
+\end{pmatrix} - \lambda \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix} = \begin{pmatrix}
+1 - \lambda & 6 \\
+5 & 2 - \lambda
+\end{pmatrix}$$
+
+### Ecuación característica:
+$$|A - \lambda I| = 0 \quad \Rightarrow \quad \begin{vmatrix}
+1 - \lambda & 6 \\
+5 & 2 - \lambda
+\end{vmatrix} = 0$$
+
+### Desarrollo 1:
+$$(1 - \lambda)(2 - \lambda) - 30 = 0$$
+$$2 - \lambda - 2\lambda + \lambda^2 - 30 = 0$$
+$$\lambda^2 - 6\lambda - 28 = 0$$
+
+### Desarrollo 2:
+
+**Ecuación característica:**
+$$\lambda^2 - 3\lambda - 28 = 0$$
+
+**Fórmula cuadrática:**
+$$\lambda_{1,2} = \frac{3 \pm \sqrt{9 - 4(1)(-28)}}{2} = \frac{3 \pm \sqrt{121}}{2} = \frac{3 \pm 11}{2}$$
+
+**Valores propios:**
+$$\lambda_1 = \frac{3 + 11}{2} = 7, \quad \lambda_2 = \frac{3 - 11}{2} = -4$$
+
+
+:::
+
+---
+
+## Ejemplo: Vectores Propios
+
+::: {.panel-tabset}
+
+### $\lambda_1 = 7$
+
+**Sistema:** $Av = 7v$
+
+$$\begin{pmatrix} 1 & 6 \\ 5 & 2 \end{pmatrix}v = 7v$$
+
+**Ecuaciones:**
+- $1v_1 + 6v_2 = 7v_1$
+- $5v_1 + 2v_2 = 7v_2$
+
+**Solución:** $v_1 = v_2$
+
+**Vectores propios:**
+$$\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ -3 \end{pmatrix}, \begin{pmatrix} 2/3 \\ 2/3 \end{pmatrix}$$
+
+etc vectores propios.
+
+### $\lambda_2 = -4$
+
+**Sistema:** $Av = -4v$
+
+$$\begin{pmatrix} 1 & 6 \\ 5 & 2 \end{pmatrix}v = -4v$$
+
+**Ecuaciones:**
+- $1v_1 + 6v_2 = -4v_1$
+- $5v_1 + 2v_2 = -4v_2$
+
+**Solución:** $v_2 = -\frac{5}{6}v_1$
+
+**Vectores propios:**
+$$\begin{pmatrix} 1 \\ -\frac{5}{6} \end{pmatrix}, \begin{pmatrix} -6 \\ 5 \end{pmatrix}, \begin{pmatrix} 3 \\ -\frac{15}{3} \end{pmatrix}, $$, 
+
+etc vectores propios.
+
+El conjunto infinito de vectores propios asociados a un valor propio se conoce como espacio propio.
+
+
+:::
+
+
+---
 
 # <span style="color: white;">References</span> {background-image="Images/matrix.jpg"}
 

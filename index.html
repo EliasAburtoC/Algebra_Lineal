@@ -361,18 +361,33 @@
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ol type="1">
-<li><p><strong>Vectores</strong><br>
-Igualdad de vectores, Operación con vectores, propiedades de operaciones vectoriales, norma y distancia, producto escalar y ortogonalidad.</p></li>
+<li><p><strong>Operaciones con Vectores</strong><br>
+Suma, producto por escalar, producto interno, ortogonalidad, norma de un vector, ángulo entre vectores.</p></li>
 <li><p><strong>Matrices</strong><br>
-Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial, propiedades de la multiplicación de matrice, potencias de matrices, matriz identidad, matriz transpuesta, determinantes, matrices diagonales, etc.</p></li>
+Operaciones básicas con matrices (suma, producto, transpuesta).</p></li>
+<li><p><strong>Matrices Especiales</strong><br>
+Matriz nula, matriz identidad, matriz diagonal, matriz triangular.</p></li>
+<li><p><strong>Elementos de Álgebra Lineal</strong><br>
+Independencia lineal, bases.</p></li>
+</ol>
+</section>
+<section id="agenda-1" class="slide level2">
+<h2>Agenda</h2>
+<ol start="5" type="1">
+<li><p><strong>Determinantes y Matriz Inversa</strong><br>
+Determinantes, propiedades, matriz inversa, rango de una matriz.</p></li>
+<li><p><strong>Sistema Ax = b</strong><br>
+El sistema de ecuaciones lineales en forma matricial.</p></li>
+<li><p><strong>Valores y Vectores Propios</strong><br>
+Conceptos fundamentales de valores y vectores propios.</p></li>
 </ol>
 </section>
 <section class="slide level2">
 
 </section>
 <section>
-<section id="vectores" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
-<h1><span style="color: white;">Vectores</span></h1>
+<section id="operaciones-con-vectores" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
+<h1><span style="color: white;">Operaciones con Vectores</span></h1>
 
 </section>
 <section id="vectores-en-mathbbrn" class="slide level2">
@@ -402,14 +417,14 @@ Definición, operaciones con matrices, sistemas de ecuaciones en forma matricial
 <p><span class="math display">\[\overline{x} = \overline{y} \iff x_i = y_i \quad \forall i = 1, \cdots, n\]</span></p>
 <p><strong>Ejemplo:</strong> <span class="math display">\[(1,-2,0) \neq (1,0,0)\]</span></p>
 </section>
-<section id="operaciones-con-vectores" class="slide level2">
+<section id="operaciones-con-vectores-1" class="slide level2">
 <h2>Operaciones con Vectores</h2>
 <p><strong>Suma de vectores:</strong></p>
 <p><span class="math display">\[\overline{x} + \overline{y} = (x_1 + y_1, x_2 + y_2, \ldots, x_n + y_n)\]</span></p>
 <p><strong>Multiplicación por escalar:</strong></p>
 <p><span class="math display">\[\alpha \overline{x} = (\alpha x_1, \alpha x_2, \ldots, \alpha x_n)\]</span></p>
 </section>
-<section id="operaciones-con-vectores-1" class="slide level2">
+<section id="operaciones-con-vectores-2" class="slide level2">
 <h2>Operaciones con Vectores</h2>
 <p><strong>Diferencia de vectores:</strong> <span class="math display">\[\overline{x} - \overline{y} = (x_1 - y_1, x_2 - y_2, \ldots, x_n - y_n)\]</span></p>
 <p><strong>Producto escalar (producto punto):</strong> <span class="math display">\[\overline{x} \cdot \overline{y} = \sum_{i=1}^n x_i y_i\]</span></p>
@@ -679,6 +694,9 @@ A^T =
 \end{pmatrix}
 \]</span></p>
 </section>
+<section class="slide level2">
+
+</section>
 <section id="determinantes-matrices-22" class="slide level2">
 <h2>Determinantes (Matrices 2×2)</h2>
 <p>Para una matriz <span class="math inline">\(2 \times 2\)</span>: <span class="math display">\[
@@ -928,6 +946,14 @@ x_1 + 4x_2 = 10
 \vec{x} = \begin{pmatrix} 4/5 &amp; -3/5 \\ -1/5 &amp; 2/5 \end{pmatrix} \begin{pmatrix} 5 \\ 10 \end{pmatrix} = \begin{pmatrix} -2 \\ 3 \end{pmatrix}
 \]</span></p>
 </section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="sistema-ax-b" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
+<h1><span style="color: white;">Sistema Ax = b</span></h1>
+<p><span style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);"> El sistema de ecuaciones lineales en forma matricial. </span></p>
+</section>
 <section id="independencia-lineal" class="slide level2">
 <h2>Independencia Lineal</h2>
 <p>Los vectores <span class="math inline">\(\{\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_m\}\)</span> en <span class="math inline">\(\mathbb{R}^n\)</span> son <strong>linealmente independientes (l.i.)</strong> si: <span class="math display">\[\sum_{i=1}^m \alpha_i \vec{x}_i = \vec{0} \implies \alpha_i = 0 \forall i\]</span></p>
@@ -989,11 +1015,222 @@ B = \begin{pmatrix}
 <div style="margin-bottom: 1.5em;">
 
 </div>
-<p><strong>Propiedad:</strong> <span class="math inline">\(\rho(A) = \rho(A^T)\)</span></p>
+<p><strong>Nota:</strong></p>
+<p>El máximo número de columnas linealmente independientes coincide con<br>
+el máximo número de filas linealmente independientes.</p>
 <div style="margin-bottom: 1.5em;">
 
 </div>
-<p><strong>Cota:</strong> Para <span class="math inline">\(A_{m \times n}\)</span>, <span class="math inline">\(\rho(A) \leq \min\{m,n\}\)</span></p>
+<p><strong>Teorema:</strong> <span class="math inline">\(\rho(A) = \rho(A^T)\)</span></p>
+<p>Note que si <span class="math inline">\(A\)</span> es de orden <span class="math inline">\(m \times n\)</span>, entonces:</p>
+<p><span class="math display">\[\rho(A) \leq \min\{m, n\}\]</span></p>
+</section>
+<section id="rango-de-matrices" class="slide level2">
+<h2>Rango de Matrices</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Definición</a></li><li><a href="#tabset-5-2">Ejemplo</a></li><li><a href="#tabset-5-3">Solución</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<p>El rango de la matriz <span class="math inline">\(A\)</span> es igual al orden de la mayor submatriz cuadrada de <span class="math inline">\(A\)</span> con determinante no nulo.</p>
+</div>
+<div id="tabset-5-2">
+<p><span class="math display">\[
+A = \begin{pmatrix}
+1 &amp; 5 &amp; 6 &amp; -1 \\
+-1 &amp; 1 &amp; 0 &amp; 3 \\
+3 &amp; 2 &amp; 5 &amp; 1
+\end{pmatrix}
+\]</span></p>
+<p>Columnas: <span class="math inline">\(C_1, C_2, C_3, C_4\)</span></p>
+</div>
+<div id="tabset-5-3">
+<p>Observamos que <span class="math inline">\(C_3 = C_1 + C_2\)</span>, es decir, <span class="math inline">\(C_3\)</span> es combinación lineal de <span class="math inline">\(C_1\)</span> y <span class="math inline">\(C_2\)</span>.<br>
+Luego concluimos que <span class="math inline">\(\rho(A) \leq 3\)</span>.</p>
+<p>Además, podemos verificar que:</p>
+<p><span class="math display">\[
+\begin{vmatrix}
+1 &amp; 5 &amp; -1 \\
+-1 &amp; 1 &amp; 3 \\
+3 &amp; 2 &amp; 1
+\end{vmatrix} = 50 \neq 0 \Rightarrow \rho(A) = 3
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aplicación-sistemas-de-ecuaciones" class="slide level2">
+<h2>Aplicación: Sistemas de Ecuaciones</h2>
+<p>Dado el sistema <span class="math inline">\(A\mathbf{x} = \mathbf{b}\)</span>, ¿cómo determinamos cuándo este sistema tiene solución?</p>
+<p>Consideremos la matriz ampliada de <span class="math inline">\(A\)</span>, denotada por <span class="math inline">\(A_b\)</span>:</p>
+<p><span class="math display">\[A_b = (A \mid \mathbf{b})\]</span></p>
+<p><strong>Teorema:</strong><br>
+<span class="math display">\[A\mathbf{x} = \mathbf{b} \text{ tiene solución} \iff \rho(A) = \rho(A_b)\]</span></p>
+</section>
+<section class="slide level2">
+
+<h3 id="ejemplo-1---sistema-con-solución">Ejemplo 1 - Sistema con Solución</h3>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Sistema</a></li><li><a href="#tabset-6-2">Matrices</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<p><span class="math display">\[
+\begin{cases}
+2x_1 + 3x_2 = 2 \\
+4x_1 + 7x_2 = 3
+\end{cases}
+\]</span></p>
+</div>
+<div id="tabset-6-2">
+<p><span class="math display">\[
+A = \begin{pmatrix} 2 &amp; 3 \\ 4 &amp; 7 \end{pmatrix} \quad
+A_b = \begin{pmatrix} 2 &amp; 3 &amp; 2 \\ 4 &amp; 7 &amp; 3 \end{pmatrix}
+\]</span></p>
+<p>Claramente <span class="math inline">\(\rho(A) = \rho(A_b) = 2\)</span>, entonces el sistema tiene solución.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="ejemplo-2---sistema-sin-solución">Ejemplo 2 - Sistema sin Solución</h3>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Sistema</a></li><li><a href="#tabset-7-2">Matrices</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<p><span class="math display">\[
+\begin{cases}
+3x_1 + 4x_2 = 2 \\
+6x_1 + 8x_2 = 3
+\end{cases}
+\]</span></p>
+</div>
+<div id="tabset-7-2">
+<p><span class="math display">\[
+A = \begin{pmatrix} 3 &amp; 4 \\ 6 &amp; 8 \end{pmatrix} \quad
+A_b = \begin{pmatrix} 3 &amp; 4 &amp; 2 \\ 6 &amp; 8 &amp; 3 \end{pmatrix}
+\]</span></p>
+<p>Como <span class="math inline">\(\rho(A) = 1\)</span> y <span class="math inline">\(\rho(A_b) = 2\)</span>, entonces el sistema <strong>no tiene solución</strong>.</p>
+<p>En efecto, si multiplicamos la primera ecuación por 2 obtenemos <span class="math inline">\(6x_1 + 8x_2 = 4\)</span>, que contradice la segunda ecuación.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="ejemplo-3---sistema-33-con-solución">Ejemplo 3 - Sistema 3×3 con Solución</h3>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">Sistema</a></li><li><a href="#tabset-8-2">Matrices</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<p><span class="math display">\[
+\begin{cases}
+2x_1 + 2x_2 - x_3 = -3 \\
+4x_1 + 2x_3 = 8 \\
+6x_2 - 3x_3 = -12
+\end{cases}
+\]</span></p>
+</div>
+<div id="tabset-8-2">
+<p><span class="math display">\[
+A = \begin{pmatrix} 2 &amp; 2 &amp; -1 \\ 4 &amp; 0 &amp; 2 \\ 0 &amp; 6 &amp; -3 \end{pmatrix} \quad
+A_b = \begin{pmatrix} 2 &amp; 2 &amp; -1 &amp; -3 \\ 4 &amp; 0 &amp; 2 &amp; 8 \\ 0 &amp; 6 &amp; -3 &amp; -12 \end{pmatrix}
+\]</span></p>
+<p><span class="math inline">\(\rho(A) = 3\)</span> y <span class="math inline">\(\rho(A_b) = 3\)</span>, luego el sistema <strong>tiene solución</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="valores-y-vectores-propios" class="title-slide slide level1 center" data-background-image="Images/matrix.jpg">
+<h1><span style="color: white;">Valores y Vectores Propios</span></h1>
+
+</section>
+<section id="valores-y-vectores-propios-1" class="slide level2">
+<h2>Valores y Vectores Propios</h2>
+<div class="panel-tabset">
+<ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Definición</a></li><li><a href="#tabset-9-2">Cómo encontrar <span class="math inline">\(\lambda\)</span> y <span class="math inline">\(v\)</span></a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1">
+<p>Sea <span class="math inline">\(A\)</span> una matriz cuadrada de orden <span class="math inline">\(n \times n\)</span>.</p>
+<p>El número real <span class="math inline">\(\lambda\)</span> se llama <strong>valor propio</strong> de <span class="math inline">\(A\)</span> si existe un vector <span class="math inline">\(v \in \mathbb{R}^n\)</span>, no nulo, tal que:</p>
+<p><span class="math display">\[Av = \lambda v\]</span></p>
+<p>El vector <span class="math inline">\(v\)</span> se llama <strong>vector propio</strong>.</p>
+</div>
+<div id="tabset-9-2">
+<p>De la definición se tiene:</p>
+<p><span class="math display">\[Av - \lambda Iv = 0\]</span> <span class="math display">\[(A - \lambda I)v = 0\]</span></p>
+<p>Como <span class="math inline">\(v \neq 0\)</span>, entonces esta ecuación es cierta si y solamente si <span class="math inline">\(|A - \lambda I| = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejemplo-valores-propios" class="slide level2">
+<h2>Ejemplo: Valores Propios</h2>
+<div class="panel-tabset">
+<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">Matriz dada:</a></li><li><a href="#tabset-10-2">Matriz <span class="math inline">\(A - \lambda I\)</span>:</a></li><li><a href="#tabset-10-3">Ecuación característica:</a></li><li><a href="#tabset-10-4">Desarrollo 1:</a></li><li><a href="#tabset-10-5">Desarrollo 2:</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1">
+<p><span class="math display">\[A = \begin{pmatrix}
+1 &amp; 6 \\
+5 &amp; 2
+\end{pmatrix}\]</span></p>
+</div>
+<div id="tabset-10-2">
+<p><span class="math display">\[A - \lambda I = \begin{pmatrix}
+1 &amp; 6 \\
+5 &amp; 2
+\end{pmatrix} - \lambda \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix} = \begin{pmatrix}
+1 - \lambda &amp; 6 \\
+5 &amp; 2 - \lambda
+\end{pmatrix}\]</span></p>
+</div>
+<div id="tabset-10-3">
+<p><span class="math display">\[|A - \lambda I| = 0 \quad \Rightarrow \quad \begin{vmatrix}
+1 - \lambda &amp; 6 \\
+5 &amp; 2 - \lambda
+\end{vmatrix} = 0\]</span></p>
+</div>
+<div id="tabset-10-4">
+<p><span class="math display">\[(1 - \lambda)(2 - \lambda) - 30 = 0\]</span> <span class="math display">\[2 - \lambda - 2\lambda + \lambda^2 - 30 = 0\]</span> <span class="math display">\[\lambda^2 - 6\lambda - 28 = 0\]</span></p>
+</div>
+<div id="tabset-10-5">
+<p><strong>Ecuación característica:</strong> <span class="math display">\[\lambda^2 - 3\lambda - 28 = 0\]</span></p>
+<p><strong>Fórmula cuadrática:</strong> <span class="math display">\[\lambda_{1,2} = \frac{3 \pm \sqrt{9 - 4(1)(-28)}}{2} = \frac{3 \pm \sqrt{121}}{2} = \frac{3 \pm 11}{2}\]</span></p>
+<p><strong>Valores propios:</strong> <span class="math display">\[\lambda_1 = \frac{3 + 11}{2} = 7, \quad \lambda_2 = \frac{3 - 11}{2} = -4\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejemplo-vectores-propios" class="slide level2">
+<h2>Ejemplo: Vectores Propios</h2>
+<div class="panel-tabset">
+<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1"><span class="math inline">\(\lambda_1 = 7\)</span></a></li><li><a href="#tabset-11-2"><span class="math inline">\(\lambda_2 = -4\)</span></a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1">
+<p><strong>Sistema:</strong> <span class="math inline">\(Av = 7v\)</span></p>
+<p><span class="math display">\[\begin{pmatrix} 1 &amp; 6 \\ 5 &amp; 2 \end{pmatrix}v = 7v\]</span></p>
+<p><strong>Ecuaciones:</strong> - <span class="math inline">\(1v_1 + 6v_2 = 7v_1\)</span> - <span class="math inline">\(5v_1 + 2v_2 = 7v_2\)</span></p>
+<p><strong>Solución:</strong> <span class="math inline">\(v_1 = v_2\)</span></p>
+<p><strong>Vectores propios:</strong> <span class="math display">\[\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ -3 \end{pmatrix}, \begin{pmatrix} 2/3 \\ 2/3 \end{pmatrix}\]</span></p>
+<p>etc vectores propios.</p>
+</div>
+<div id="tabset-11-2">
+<p><strong>Sistema:</strong> <span class="math inline">\(Av = -4v\)</span></p>
+<p><span class="math display">\[\begin{pmatrix} 1 &amp; 6 \\ 5 &amp; 2 \end{pmatrix}v = -4v\]</span></p>
+<p><strong>Ecuaciones:</strong> - <span class="math inline">\(1v_1 + 6v_2 = -4v_1\)</span> - <span class="math inline">\(5v_1 + 2v_2 = -4v_2\)</span></p>
+<p><strong>Solución:</strong> <span class="math inline">\(v_2 = -\frac{5}{6}v_1\)</span></p>
+<p><strong>Vectores propios:</strong> <span class="math display">\[\begin{pmatrix} 1 \\ -\frac{5}{6} \end{pmatrix}, \begin{pmatrix} -6 \\ 5 \end{pmatrix}, \begin{pmatrix} 3 \\ -\frac{15}{3} \end{pmatrix}, \]</span>,</p>
+<p>etc vectores propios.</p>
+<p>El conjunto infinito de vectores propios asociados a un valor propio se conoce como espacio propio.</p>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
